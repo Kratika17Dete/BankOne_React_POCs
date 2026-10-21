@@ -9,7 +9,8 @@ import "@ionic/react/css/typography.css";
 
 import "./theme/app-theme.css";
 import "./index.css";
-
+import { showSecurityWarning } from "./utils/SecurityWarning";
+showSecurityWarning();
 ReactDOM.createRoot(
  document.getElementById("root")
 ).render(
