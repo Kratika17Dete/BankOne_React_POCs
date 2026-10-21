@@ -1,0 +1,81 @@
+.login-page {
+  display: flex;
+  height: 100vh;
+}
+.left-section {
+  flex: 1;
+  background: linear-gradient(135deg, #c64545, #8a1f1f);
+}
+.left-overlay {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 60px;
+}
+.banner-content h2,
+.banner-content h1 {
+  color: #fff;
+}
+.banner-content h1 {
+  font-size: 72px;
+}
+.right-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-box {
+  width: 550px;
+}
+.title {
+  margin-bottom: 30px;
+}
+.field {
+  width: 100%;
+  padding: 18px;
+  border: none;
+  background: #f2f2f2;
+  border-radius: 12px;
+  margin: 10px 0 20px;
+}
+.remember {
+  margin: 10px 0;
+}
+.pwd {
+  position: relative;
+}
+.pwd button {
+  position: absolute;
+  right: 15px;
+  top: 25px;
+  border: none;
+  background: none;
+}
+.login-btn {
+  width: 100%;
+  padding: 18px;
+  background: #d33232;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+.divider {
+  text-align: center;
+  margin: 20px;
+}
+.enrol-btn {
+  width: 100%;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+.footer {
+  text-align: center;
+  margin-top: 20px;
+}
+.forgot {
+  color: #d33232;
+}

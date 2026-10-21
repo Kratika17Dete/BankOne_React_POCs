@@ -1,0 +1,182 @@
+/* =========================================
+   BANK ONE - GLOBAL THEME
+   ========================================= */
+
+/* LIGHT THEME */
+
+:root {
+  --app-bg: #f1f3f5;
+  --app-surface: #ffffff;
+  --app-surface-secondary: #f8f9fa;
+
+  --app-text: #111827;
+  --app-text-secondary: #667085;
+
+  --app-border: #e5e7eb;
+
+  --app-primary: #e60012;
+
+  --app-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  /* Ionic */
+  --ion-background-color: var(--app-bg);
+  --ion-text-color: var(--app-text);
+  --ion-card-background: var(--app-surface);
+  --ion-item-background: var(--app-surface);
+  --ion-toolbar-background: var(--app-surface);
+}
+
+
+/* =========================================
+   DARK THEME
+   ========================================= */
+
+html.dark {
+  --app-bg: #0f172a;
+  --app-surface: #1e293b;
+  --app-surface-secondary: #263449;
+
+  --app-text: #f8fafc;
+  --app-text-secondary: #94a3b8;
+
+  --app-border: #334155;
+
+  --app-primary: #ff3344;
+
+  --app-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+
+  /* Ionic */
+  --ion-background-color: var(--app-bg);
+  --ion-text-color: var(--app-text);
+  --ion-card-background: var(--app-surface);
+  --ion-item-background: var(--app-surface);
+  --ion-toolbar-background: var(--app-surface);
+}
+
+
+/* =========================================
+   GLOBAL APP ELEMENTS
+   ========================================= */
+
+html,
+body,
+#root,
+ion-app,
+ion-content {
+  background: var(--app-bg);
+  color: var(--app-text);
+}
+
+
+/*
+  Existing normal HTML elements inherit
+  the selected theme automatically.
+*/
+
+body {
+  background-color: var(--app-bg);
+  color: var(--app-text);
+}
+
+
+/* Ionic */
+
+ion-content {
+  --background: var(--app-bg);
+  --color: var(--app-text);
+}
+
+ion-toolbar {
+  --background: var(--app-surface);
+  --color: var(--app-text);
+}
+
+ion-item {
+  --background: var(--app-surface);
+  --color: var(--app-text);
+  --border-color: var(--app-border);
+}
+
+ion-list {
+  background: var(--app-surface);
+}
+
+ion-card {
+  --background: var(--app-surface);
+  color: var(--app-text);
+}
+
+
+/* =========================================
+   HANDLE EXISTING TAILWIND CLASSES
+   ========================================= */
+
+html.dark .bg-white {
+  background-color: var(--app-surface) !important;
+}
+
+html.dark .bg-gray-50 {
+  background-color: var(--app-surface-secondary) !important;
+}
+
+html.dark .bg-gray-100 {
+  background-color: var(--app-bg) !important;
+}
+
+html.dark .bg-gray-200 {
+  background-color: var(--app-surface-secondary) !important;
+}
+
+
+/* Text */
+
+html.dark .text-black {
+  color: var(--app-text) !important;
+}
+
+html.dark .text-gray-900,
+html.dark .text-gray-800,
+html.dark .text-gray-700 {
+  color: var(--app-text) !important;
+}
+
+html.dark .text-gray-600,
+html.dark .text-gray-500,
+html.dark .text-gray-400 {
+  color: var(--app-text-secondary) !important;
+}
+
+
+/* Borders */
+
+html.dark .border-gray-100,
+html.dark .border-gray-200,
+html.dark .border-gray-300 {
+  border-color: var(--app-border) !important;
+}
+
+
+/* Inputs */
+
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: var(--app-surface);
+  color: var(--app-text);
+  border-color: var(--app-border);
+}
+
+
+/* Placeholder */
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: var(--app-text-secondary);
+}
+
+
+/* Buttons without explicit brand backgrounds */
+
+html.dark button {
+  color: inherit;
+}
