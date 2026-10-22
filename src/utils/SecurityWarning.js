@@ -1,10 +1,17 @@
 import { Capacitor } from "@capacitor/core";
 
 export const showSecurityWarning = () => {
+  // Do not apply browser-specific behavior on Android/iOS
   if (Capacitor.isNativePlatform()) {
     return;
   }
 
+  // Disable right-click context menu
+  document.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+  });
+
+  // Clear existing console messages
   console.clear();
 
   console.log(
