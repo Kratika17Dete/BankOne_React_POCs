@@ -1,20 +1,20 @@
 import { PieChart, Pie, ResponsiveContainer } from "recharts";
 
 const TOTAL = 84;        // total term in months (7 years)
-const COMPLETED = 22.2;  // 01Y 10M 05D
-const INSTALMENTS = 20; // 02M 25D (use whatever your backend sends)
+const COMPLETED = 22.2;  // completed term
+const INSTALMENTS = 20;  // instalments paid
 
 const START = 90; // 12 o'clock
 const toAngle = (months) => START - (months / TOTAL) * 360;
 
 const completedEnd = toAngle(COMPLETED);
 
-export default function TermProgress() {
+export default function LoanCharts() {
   return (
     <div style={{ width: "100%", height: 280 }}>
       <ResponsiveContainer>
         <PieChart>
-          {/* Remaining term: thin ring, from end of completed back to start */}
+          {/* Remaining Term */}
           <Pie
             data={[{ value: 1 }]}
             dataKey="value"
@@ -27,7 +27,7 @@ export default function TermProgress() {
             isAnimationActive={false}
           />
 
-          {/* Completed term: thick dark arc */}
+          {/* Completed Term */}
           <Pie
             data={[{ value: 1 }]}
             dataKey="value"
@@ -40,9 +40,9 @@ export default function TermProgress() {
             isAnimationActive={false}
           />
 
-          {/* Total instalments: light arc, pushed slightly outward */}
+          {/* Instalments */}
           <Pie
-            data={[{ value: 10 }]}
+            data={[{ value: 1 }]}
             dataKey="value"
             startAngle={START}
             endAngle={toAngle(INSTALMENTS)}

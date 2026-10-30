@@ -10,7 +10,7 @@ import ArcNavigationPage from "./pages/ArcNavigationPage";
 import DeviceDetailsPOC from "./components/DeviceDetailsPOC";
 import CoverFlowNavigation from "./components/CoverFlowNavigation";
 import BubbleNavigation from "./components/BubbleNavigation";
-
+import LoanCharts from "./components/LoanCharts";
 // export default function App() {
 //   const [page, setPage] = useState("dashboard");
 
@@ -100,13 +100,25 @@ import BubbleNavigation from "./components/BubbleNavigation";
 // export default App;
 
 //Device detail POC ===========
-function App() {
-return <DeviceDetailsPOC />;
-}
-export default App;
+// function App() {
+// return <DeviceDetailsPOC />;
+// }
+// export default App;
 
 // Biometric POC ===========
 // function App() {
 // return <LoginPage />;
 // }
 // export default App;
+
+//Biometric POC ===========
+// function App() {
+// return <LoginPage />;
+// }
+// export default App;
+
+//Loanchart POC ===========
+function App() {
+return <LoanCharts />;
+}
+export default App;

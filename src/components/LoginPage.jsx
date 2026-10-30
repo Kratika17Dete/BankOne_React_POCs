@@ -1,49 +1,7 @@
 import React from "react";
 
 function LoginPage() {
-  const handleBiometric = async () => {
-  try {
-    const challenge = new Uint8Array(32);
 
-    window.crypto.getRandomValues(challenge);
-
-    const credential = await navigator.credentials.create({
-      publicKey: {
-        challenge,
-        rp: {
-          name: "Bank One"
-        },
-        user: {
-          id: new Uint8Array(16),
-          name: "testuser",
-          displayName: "Test User"
-        },
-        pubKeyCredParams: [
-          {
-            type: "public-key",
-            alg: -7
-          }
-        ],
-        authenticatorSelection: {
-          authenticatorAttachment: "platform",
-          userVerification: "required"
-        },
-        timeout: 60000,
-        attestation: "none"
-      }
-    });
-localStorage.setItem(
-  "credentialId",
-  credential.id
-);
-
-console.log("Saved", credential.id);
-    console.log("Credential:", credential);
-
-  } catch (err) {
-    console.error(err);
-  }
-};
 const loginWithBiometric = async () => {
   try {
 
@@ -101,12 +59,7 @@ alt="Bank Login"></img>
 >
   Login with Biometrics
 </button>
-<button
-  onClick={handleBiometric}
-  className="bg-blue-600 text-white px-4 py-2 rounded"
->
-  Test Windows Hello
-</button>
+
 
 
         </div>
